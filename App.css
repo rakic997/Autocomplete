@@ -1,0 +1,95 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #202124;
+}
+.input-container {
+  position: relative;
+}
+.clear {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  background-color: transparent;
+  color: #ececec;
+  line-height: 15px;
+}
+.clear:hover {
+  cursor: pointer;
+}
+.cities-search {
+  position: relative;
+}
+.cities-search .prompt-text {
+    position: absolute;
+    bottom: -80px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #bdc1c6;
+}
+
+.cities-search input[type=text] {
+  width: 520px;
+  height: 56px;
+  background: #202124;
+  border: 1px solid #5f6368;
+  border-radius: 24px;
+  padding: 0 25px;
+  font-size: 16px;
+  color: #bdc1c6;
+}
+
+.cities-search input[type=text]::placeholder-shown {
+  font-size: 16px;
+  color: #bdc1c6;
+}
+
+.open {
+  display: block!important;
+}
+.cities-dropdown {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  max-width: 570px;
+  display: none;
+  padding: 20px 0;
+  border-radius: 24px;
+  background-color: #303134;
+}
+.cities-dropdown   li {
+  list-style: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #bdc1c6;
+  height: 38px;
+  line-height: 35px;
+}
+
+.cities-dropdown li:last-child {
+  padding-bottom: 0;
+}
+
+.cities-dropdown li:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 850px) {
+  .cities-search input[type="text"] {
+    width: 300px;
+  }
+}
